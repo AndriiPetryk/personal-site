@@ -1,0 +1,41 @@
+<%- include('../includes/head.ejs') %>
+
+<body id="page-top">
+
+<%- include('./nav.ejs') %>
+
+
+<div class="container-fluid p-0">
+
+<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
+    <div class="w-100">
+        <h2 class="mb-5">Skills</h2>
+
+        <% if (skillsData.length > 0) { %>
+            <% skillsData.forEach(details => { %>
+                <p><%= details.description %></p>
+                <div class="subheading mb-3">Workflow</div>
+                <ul class="fa-ul mb-0">
+                    <% details.skillsData.forEach(data => { %>
+                        <li>
+                            <%= data %>
+                        </li>
+                    <% }) %>
+                </ul>
+
+            <% }) %>
+        <% } else { %>
+            <h1>No Data for displaying</h1>
+        <% } %>
+    </div>
+</section>
+
+    <hr class="m-0">
+
+</div>
+
+<%- include('./footer.ejs') %>
+
+</body>
+
+</html>

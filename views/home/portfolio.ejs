@@ -1,0 +1,43 @@
+<%- include('../includes/head.ejs') %>
+
+<body id="page-top">
+
+<%- include('./nav.ejs') %>
+
+<div class="container-fluid p-0">
+
+<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="portfolio">
+    <div class="w-100">
+        <h2 class="mb-5">Portfolio</h2>
+        <div class="row mb-2">
+                <% if (portfolioData.length > 0) { %>
+                    <% portfolioData.forEach(details => { %>
+                    <div class="col-md-6">
+                        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                            <div class="portfolioBgImg" style="background-image: url(../../<%= details.imageUrl %>)"></div>
+                            <div class="col p-4 d-flex flex-column position-static">
+                                <h3 class="mb-0"><%= details.projectName %></h3>
+                                <div class="mb-1 text-muted">Nov 12</div>
+                                <p class="card-text mb-auto"><%= details.description %></p>
+                                <p class="card-text mb-auto"><%= details.skills %></p>
+                                <a href="<%= details.link %>" class="stretched-link">See <%= details.projectName %></a>
+                            </div>
+                        </div>
+                    </div>
+                    <% }) %>
+                <% } else { %>
+                    <h1>No Data for displaying</h1>
+                <% } %>
+        </div>
+    </div>
+</section>
+
+    <hr class="m-0">
+
+</div>
+
+<%- include('./footer.ejs') %>
+
+</body>
+
+</html>

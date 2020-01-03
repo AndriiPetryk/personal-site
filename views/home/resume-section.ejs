@@ -1,0 +1,45 @@
+<%- include('../includes/head.ejs') %>
+
+<body id="page-top">
+
+<%- include('./nav.ejs') %>
+
+
+<div class="container-fluid p-0">
+
+<section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
+    <div class="w-100">
+        <h2 class="mb-5">Experience</h2>
+
+        <% if (experienceData.length > 0) { %>
+            <% experienceData.forEach(details => { %>
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <div class="resume-position-date-wrap">
+                            <h3 class="mb-0"><%= details.position %></h3>
+                            <span class="text-primary"><%= details.date %></span>
+                        </div>
+                        <div class="subheading mb-3"><%= details.company %></div>
+                        <p><%= details.description %></p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                    </div>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <h1>No Data for displaying</h1>
+        <% } %>
+
+    </div>
+
+</section>
+
+    <hr class="m-0">
+
+</div>
+
+<%- include('./footer.ejs') %>
+
+</body>
+
+</html>

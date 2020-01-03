@@ -1,0 +1,39 @@
+<%- include('../includes/head.ejs') %>
+
+<body id="page-top">
+
+<%- include('./nav.ejs') %>
+
+
+<div class="container-fluid p-0">
+<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
+    <div class="w-100">
+        <h2 class="mb-5">Education</h2>
+        <% if (educationData.length > 0) { %>
+            <% educationData.forEach(details => { %>
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0"><%= details.universityName %></h3>
+                        <div class="subheading mb-3"><%= details.scienceDegree %></div>
+                        <div><%= details.description %></div>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary"><%= details.date %></span>
+                    </div>
+                </div>
+            <% }) %>
+        <% } else { %>
+            <h1>No Data for displaying</h1>
+        <% } %>
+    </div>
+</section>
+
+    <hr class="m-0">
+
+</div>
+
+<%- include('./footer.ejs') %>
+
+</body>
+
+</html>
