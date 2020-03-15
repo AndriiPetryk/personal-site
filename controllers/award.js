@@ -3,7 +3,6 @@ import Award from '../models/product';
 const getAward = async (req, res, next) => {
   try {
     const awardData = await Award.find();
-    console.log('aboutData', awardData);
     const infoDetails = {
       awardData,
       path: '/award'

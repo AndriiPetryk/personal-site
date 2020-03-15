@@ -4,17 +4,14 @@ const deleteProduct = btn => {
 
   const productElement = btn.closest('article');
 
-  fetch('/admin/product/' + prodId, {
+  fetch(`/admin/product/${prodId}`, {
     method: 'DELETE',
     headers: {
       'csrf-token': csrf
     }
   })
-    .then(result => {
-      return result.json();
-    })
+    .then(result => result.json())
     .then(data => {
-      console.log(data);
       productElement.parentNode.removeChild(productElement);
     })
     .catch(err => {
