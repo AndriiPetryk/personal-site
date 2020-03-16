@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon app.js --exec babel-node",
-    "heroku-postbuild": "npm install",
+    "heroku-postbuild": "yarn",
     "start": "babel-node app.js",
     "babel-version": "babel --version"
   },
