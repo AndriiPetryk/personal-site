@@ -102,7 +102,7 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect(process.env.MONGODB_URI || MONGODB_URI, { useNewUrlParser: true })
+  .connect(process.env.MONGOLAB_COPPER_URI || MONGODB_URI, { useNewUrlParser: true })
   .then(() => {
     app.listen(process.env.PORT || 3000);
   })
