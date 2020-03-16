@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon app.js --exec babel-node",
     "heroku-postbuild": "npm install",
-    "start": "babel-node app.js"
+    "start": "babel-node app.js",
+    "babel-version": "babel --version"
   },
   "author": "Andrii Petryk",
   "license": "ISC",
@@ -19,9 +20,8 @@
     "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.7.7",
     "babel": "6.23.0",
-    "babel-cli": "6.26.0",
-    "babel-preset-env": "1.6.0",
-    "eslint-config-prettier": "^6.7.0"
+    "babel-cli": "6.26",
+    "babel-preset-env": "1.6.0"
   },
   "dependencies": {
     "babel-eslint": "^10.0.3",
