@@ -102,13 +102,12 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  // .connect(process.env.MONGOLAB_COPPER_URI || MONGODB_URI, {
   .connect(MONGODB_URI_ATLAS, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
   .then(() => {
-    app.listen(process.env.PORT || 3000);
+    app.listen(3000);
   })
   .catch(err => {
     console.log(err);
