@@ -4,7 +4,6 @@ import Portfolio from '../models/portfolio';
 const getEducation = async (req, res, next) => {
   try {
     const portfolioData = await Portfolio.find();
-    console.log('portfolioData', portfolioData);
     const infoDetails = {
       portfolioData,
       path: '/portfolio'

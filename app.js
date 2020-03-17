@@ -10,7 +10,7 @@ import multer from 'multer';
 import errorController from './controllers/error';
 import User from './models/user';
 import store from './util/dbStore';
-import { MONGODB_URI } from './constants/constants';
+import { MONGODB_URI_ATLAS } from './constants/constants';
 
 // import adminRoutes from './routes/admin';
 // import shopRoutes from './routes/shop';
@@ -102,7 +102,8 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect(process.env.MONGOLAB_COPPER_URI || MONGODB_URI, {
+  // .connect(process.env.MONGOLAB_COPPER_URI || MONGODB_URI, {
+  .connect(MONGODB_URI_ATLAS, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
