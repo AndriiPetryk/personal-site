@@ -5,10 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon app.js --exec babel-node",
     "heroku-postbuild": "yarn",
-    "start": "babel-node app.js",
-    "babel-version": "babel --version"
+    "babel-version": "babel --version",
+    "start": "nodemon app.js --exec babel-node"
   },
   "author": "Andrii Petryk",
   "license": "ISC",
