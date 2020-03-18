@@ -6,9 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon app.js --exec babel-node",
-    "heroku-postbuild": "yarn",
     "start": "babel-node app.js",
-    "babel-version": "babel --version"
+    "heroku-postbuild": "npm install"
   },
   "author": "Andrii Petryk",
   "license": "ISC",
