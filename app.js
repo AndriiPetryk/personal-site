@@ -10,7 +10,7 @@ import multer from 'multer';
 import errorController from './controllers/error';
 import User from './models/user';
 import store from './util/dbStore';
-import { MONGODB_URI_ATLAS } from './constants/constants';
+// import { MONGODB_URI_ATLAS } from './constants/constants';
 
 // import adminRoutes from './routes/admin';
 // import shopRoutes from './routes/shop';
@@ -102,10 +102,9 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect(MONGODB_URI_ATLAS, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  })
+  .connect(
+    'mongodb+srv://user:123qweasdzxc@cluster0-fbpnp.mongodb.net/portfolioDB?retryWrites=true'
+  )
   .then(() => {
     app.listen(5000);
   })
