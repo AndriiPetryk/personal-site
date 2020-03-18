@@ -102,11 +102,14 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true
-  })
+  .connect(
+    'mongodb://heroku_0zmlc0xp:5uho67dfchapai73q7jsefm2nv@ds125574.mlab.com:25574/heroku_0zmlc0xp',
+    {
+      useNewUrlParser: true
+    }
+  )
   .then(() => {
-    app.listen(process.env.PORT || 3000);
+    app.listen(3000);
   })
   .catch(err => {
     console.log(err);
