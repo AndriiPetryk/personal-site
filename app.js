@@ -102,7 +102,7 @@ app.use((error, req, res, next) => {
 });
 
 mongoose
-  .connect(process.env.MONGODB_URI || MONGODB_URI_ATLAS, {
+  .connect(process.env.MONGODB_URI, {
     useNewUrlParser: true
   })
   .then(() => {
