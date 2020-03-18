@@ -112,3 +112,5 @@ mongoose
   .catch(err => {
     console.log(err);
   });
+
+// NPM_CONFIG_PRODUCTION false
