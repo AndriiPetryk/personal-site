@@ -1,1 +1,1 @@
-web: yarn start app.js
+web: node-babel app.js
