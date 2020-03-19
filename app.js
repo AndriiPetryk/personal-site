@@ -103,10 +103,13 @@ app.use((error, req, res, next) => {
 
 mongoose
   .connect(
-    MONGODB_URI_ATLAS,
+    process.env.MONGODB_URI,
+    // MONGODB_URI_ATLAS,
     // 'mongodb://heroku_0zmlc0xp:5uho67dfchapai73q7jsefm2nv@ds125574.mlab.com:25574/heroku_0zmlc0xp',
-    // process.env.MONGODB_URI
-    { useNewUrlParser: true, useUnifiedTopology: true }
+    {
+      useNewUrlParser: true,
+      useFindAndModify: false
+    }
   )
   .then(() => {
     app.listen(process.env.PORT || 3000);
