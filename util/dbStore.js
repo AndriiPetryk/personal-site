@@ -4,7 +4,7 @@ import { MONGODB_URI_ATLAS } from '../constants/constants';
 const MongoDBStore = require('connect-mongodb-session')(session);
 
 const store = new MongoDBStore({
-  uri: MONGODB_URI_ATLAS,
+  uri: process.env.MONGODB_URI || MONGODB_URI_ATLAS,
   collection: 'sessions'
 });
 
