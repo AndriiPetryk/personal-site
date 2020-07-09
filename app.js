@@ -12,9 +12,6 @@ import User from './models/user';
 import store from './util/dbStore';
 import { MONGODB_URI_ATLAS } from './constants/constants';
 
-// import adminRoutes from './routes/admin';
-// import shopRoutes from './routes/shop';
-// import authRoutes from './routes/auth';
 import homeRoutes from './routes/home';
 
 const app = express();
